@@ -1,0 +1,155 @@
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/**     NAVBAR      CLASSES         **/
+nav{
+    position: sticky;
+    top:0;
+    left:0;
+    border-bottom: solid 2px #333;
+    z-index: 9999;
+}
+
+nav .nav-title{
+    flex: 7;
+}
+nav .date-time{
+    flex: 4;
+}
+
+/**     BUTTON      CLASSES         **/
+.btn{
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border-radius: 3px;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.btn.primary-bg:hover{
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.title{
+    display: block;
+}
+
+/**     FORM        CLASSES         **/
+form{
+    position: relative;
+}
+
+form.flex-clm{
+    gap: 100px;
+}
+
+form>.flex-row{
+    gap: 5%;
+}
+
+.form-item{
+    position: relative;
+    flex: 1;
+}
+
+.form-item .form-input{
+    border: none;
+    border-bottom: solid 2px #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: inherit;
+    outline: none;
+    background: none;
+    width: 100%;
+    transition: border-bottom 200ms ease-in;
+}
+
+.form-item .form-input.form-textarea{
+    height: 40px;
+    min-height: 28px;
+    resize: vertical;
+}
+
+.form-item .form-input:focus{
+    border-bottom: solid 2px #ff7fbb;
+}
+
+.form-item .form-label{
+    position: absolute;
+    left: 0px;
+    top: 7px;
+    cursor: text;
+    transition: top 200ms ease-in, font-size 200ms ease-in, color 200ms ease-in;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label{
+    top: -15px;
+    font-size: 10px;
+    color:#ff7fbb;
+}
+
+.error{
+    position: absolute;
+    top: 40px;
+}
+
+#submit-button{
+    float: right;
+}
+
+#task-color{
+    position: relative;
+    top: 14px;
+    flex: 4;
+}
+#task-color:focus ~ .form-label,
+#task-color:not(:placeholder-shown) ~ .form-label{
+    top: 0px;
+    font-size: 10px;
+    color:#ff7fbb;
+}
+
+#task-color-picker{
+    position: relative;
+    flex:1;
+    top: 7px;
+}
+#task-color~.error{
+    top: 50px;
+}
+
+#color-picker{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    float:right;
+}
+#color-picker::-webkit-color-swatch-wrapper {
+    padding: 0; 
+}
+#color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+#task-color~.form-label{
+    top: 20px;
+}
+/**     FOOTER      CLASSES         **/
+.footer-text{
+    text-align: center;
+}
